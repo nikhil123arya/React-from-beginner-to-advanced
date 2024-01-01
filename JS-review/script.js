@@ -175,7 +175,7 @@ const updatedBook = {
 };
 updatedBook;
 
-// Template literal 
+// Template literal
 const summary = ` ${title} is a ${pages}-pages book, written by ${author} published in ${publicationDate.split("-")[0]}. The book has ${hasMovieAdaptation ? '' : 'not'} been adapted as a movie`;
 summary;
 
@@ -187,8 +187,8 @@ function getYear(str) {
   return str.split("-")[0];
 }
 console.log(getYear(publicationDate));
-*/
 
+/////////////////////////////////////
 const books = getBooks();
 books;
 
@@ -208,10 +208,30 @@ const adventureBooks = books
   .map((book) => book.title);
 adventureBooks
 
-const pagesAllBooks = books.reduce((sum, book) => sum + book.pages, 0);             
+const pagesAllBooks = books.reduce((sum, book) => sum + book.pages, 0);
 pagesAllBooks
 
 const arr = [3, 4, 7, 2, 9, 8, 6]
 const sorted = arr.slice().sort((a, b) => a - b);
-sorted
-arr
+*/
+
+//-Asynchronous Javascript: promises
+
+// fetch("https://jsonplaceholder.typicode.com/todos").then(res => res.json()).then(data => console.log(data));
+
+// console.log("Nikhil");
+
+
+// async / await
+
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  console.log(data);
+  return data;
+}
+
+const todos = getTodos();
+console.log(todos);
+
+console.log('nikhil');
