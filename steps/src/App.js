@@ -17,7 +17,7 @@ export default function App() {
 
 function Steps() {
   const [step, setStep] = useState(1);
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(true);
 
   // const [test, setTest] = useState({ name: "Jonas" })
 
